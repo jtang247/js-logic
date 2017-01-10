@@ -32,16 +32,11 @@ if(today === "Friday"){
 var votingAgeThreshold = 18;
 
 function canVote(age){
-  if(age>=votingAgeThreshold){
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+  return age>=votingAgeThreshold;
 }
-console.log(canVote(21));
-/*
+console.log(canVote(19));
+ 
+ /*
  * #2
  * Function - login
  * Create a function named `login` which will take a parameter: `password`.
@@ -52,12 +47,17 @@ console.log(canVote(21));
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
+var pass = "test1234";
+
 function login(password){
-  
-
-
+  if(password==="test1234"){
+    return "Login Success!";
+  }
+  else{
+    return false;
+  }
 }
-
+console.log(login(pass));
 
 /*
  * #3
@@ -71,8 +71,12 @@ function login(password){
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+var num1 = 8;
+var num2 = 4;
+function isGreaterThan(first, second){
+  return first>second;
+}
+console.log(isGreaterThan(num1,num2));
 /*
  * #4
  * Function - mustBeTrue
@@ -84,7 +88,10 @@ function login(password){
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
+function mustBeTrue(boo){
+  return boo===true;
+}
+console.log(mustBeTrue(isGreaterThan(num1,num2)));
 
 /*
  * #5
@@ -97,7 +104,12 @@ function login(password){
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+  if (word.length === 3){
+  return "Word to Big Bird!" ;
+}
+}
+console.log(bigBird("dog"));
 
 /*
  * #6
@@ -111,6 +123,17 @@ function login(password){
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
+function isEqual(first, second){
+  if(first===second){
+    return "You look mahvelous!";
+  }
+  else{
+    return "I don't know who you are anymore?";
+  }
+
+
+}
+console.log(isEqual("Hanz", "Franz"));
 
 
 /*
