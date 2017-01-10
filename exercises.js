@@ -340,6 +340,7 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
 
 
+
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
@@ -390,6 +391,18 @@ console.log(sumItUp(numArray));
   var east = [];
   var west = [];
 
+function allStars(ballers){
+  for(var i=0; i<ballers.length; i++){
+    // console.log(ballers[i]);
+    if(i%2===0){
+      // console.log(ballers[i]);
+      east.push(ballers[i]);
+    }else {west.push(ballers[i])}
+}
+}
+allStars(players);
+console.log("EAST "+east);
+console.log("WEST "+west);
 /*
  * #19
  * Function - subways
