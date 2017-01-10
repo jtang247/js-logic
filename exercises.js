@@ -148,7 +148,16 @@ console.log(isEqual("Hanz", "Franz"));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
+function notEqual(first, second){
+  if (first===second){
+    return "Cause it's like you're my mirror.";
+  }
+  else{
+    return "Opposites do attract";
+  }
 
+}
+console.log(notEqual("hanz", "franz"));
 
 /*
  * #8
@@ -161,8 +170,14 @@ console.log(isEqual("Hanz", "Franz"));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function spareChange(money){
+  if(money >100){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(spareChange(50));
 /*
  * #9
  * Function - dirty30
@@ -176,7 +191,14 @@ console.log(isEqual("Hanz", "Franz"));
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function dirty30(one,two,three){
+  if(one+two+three>30){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(dirty30(2,2,27));
 
 /*
  * #10
@@ -189,8 +211,15 @@ console.log(isEqual("Hanz", "Franz"));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
+function evenStevens(num){
 
-
+  if(num%2===0){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(evenStevens(-6));
 /*
  * #11
  * Function - daClub
@@ -203,7 +232,15 @@ console.log(isEqual("Hanz", "Franz"));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
+function daClub(cover, age){
 
+  if (age&&cover>=21){
+    return "Welcome to the Legends Lounge";
+  }else{
+    return "Chuck E Cheese is across the Street";
+  }
+}
+console.log(daClub(20,21));
 
 /*
  * #12
@@ -217,8 +254,15 @@ console.log(isEqual("Hanz", "Franz"));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
+function graduation(credits, thesis){
 
-
+  if(credits>=120||thesis===true){
+    return "Congratulations on a job well done!";
+  }else{
+    return "See you in summer school.";
+  }
+}
+console.log("grad "+graduation(111,true));
 /*
  * #13
  * Function - moneyTrain
@@ -230,7 +274,18 @@ console.log(isEqual("Hanz", "Franz"));
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
+function moneyTrain(speed){
+  if(speed<50){
+    return "You are riding Honolulu's Rail.";
+}else if(speed<100){
+  return "You are riding an Amtrak";
+}else{
+  return "Now you ballin' in the Shinkansen!";
+}
+}
+console.log("Speed 1 "+moneyTrain(26));
+console.log("Speed 2 "+moneyTrain(51));
+console.log("Speed 3 "+moneyTrain(101));
 
 /*
  * #14
@@ -245,7 +300,17 @@ console.log(isEqual("Hanz", "Franz"));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
-
+  var budget=100;
+  var doughnutPrice=5 ;
+  var doughnutBought=0;
+function buyDoughnut(){
+  if(budget>=doughnutPrice){
+    budget-+ doughnutPrice ;
+    doughnutBought++;
+  }
+}
+buyDoughnut();
+console.log("budget = "+budget+" bought = "+doughnutBought);
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -280,7 +345,10 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+for(var i=0; i<myFavFoods.length; i++){
+  console.log(myFavFoods[i]);
 
+}
 
 /*
  * #17
@@ -296,7 +364,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-
+var numArray=[3,5,7,9,11];
+var total=0;
+function sumItUp(arr){
+  for(var i=0; i<arr.length; i++){
+    total+=arr[i];
+  }
+  return total;
+}
+console.log(sumItUp(numArray));
 
 /*
  * #18
