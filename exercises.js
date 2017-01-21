@@ -338,7 +338,16 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
+var fun=["BBALL", "FBALL", "SOCCER", "BASEBALL", "GOLF" ];
 
+for (var i=0; i<fun.length; i++){
+  console.log("Player 1 " +fun[i]);
+  console.log("Player 2 " +fun[i]);
+  console.log("Player 3 " +fun[i]);
+  console.log("Player 4 " +fun[i]);
+  console.log("Player 5 " +fun[i]);
+
+}
 
 
 /* 
@@ -392,17 +401,18 @@ console.log(sumItUp(numArray));
   var west = [];
 
 function allStars(ballers){
-  for(var i=0; i<ballers.length; i++){
-    // console.log(ballers[i]);
+  for(i=0;i<7;i++){
     if(i%2===0){
-      // console.log(ballers[i]);
       east.push(ballers[i]);
-    }else {west.push(ballers[i])}
-}
+    }
+    else { 
+      west.push(ballers[i]);
+  }
+ }
 }
 allStars(players);
-console.log("EAST "+east);
-console.log("WEST "+west);
+console.log(west);
+console.log(east);
 /*
  * #19
  * Function - subways
@@ -417,6 +427,16 @@ console.log("WEST "+west);
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+  function subways(special){
+
+    for(var i=0;i<special.length;i++){
+      if(i%2===1){
+        special[i]= "Classic Tuna";
+      }
+    }
+    return special;
+  }
+console.log(subways(subOftheDay)+" - Exercise 19");
 
 /*
 Final Boss
@@ -430,13 +450,30 @@ Final Boss
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
 
-  var phrase = "An apple a day keeps Alice feeling awesome!"
-  
+  var phrase = "An apple a day keeps Alice feeling awesome"; 
 
+function removeLetter(str){
+  var newPhrase=[];
+  for(var i=0;i<str.length;i++){
+    if(!(str.charAt(i)==="a"||str.charAt(i)==="A")){
+      newPhrase.push(str.charAt(i));
+  } 
+ }
+    return newPhrase;
+}
+console.log(removeLetter(phrase));
 
+// function removeLetter(str) {
+//   var newPhrase = [];
+//   for (i=0;i<str.length;i++) {
+//     if (!(str.charAt(i) === "a" || str.charAt(i) === "A")) {
+//       newPhrase.push(str.charAt(i));
+//     }
+//   }
+//   return newPhrase;
+// }
 
-
-
+// console.log(removeLetter(phrase) + " - Exercise 20");
 
 
 
